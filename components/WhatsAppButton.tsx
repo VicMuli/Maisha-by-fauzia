@@ -17,11 +17,15 @@ const WhatsAppIcon = ({ size = 24 }: { size?: number }) => (
 
 export const WhatsAppButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasNotification, setHasNotification] = useState(true);
   const phoneNumber = '254745795686';
   const welcomeMessage = "Hello! I'm interested in learning more about the services at Maisha Medical.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(welcomeMessage)}`;
 
-  const toggleOpen = () => setIsOpen(!isOpen);
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+    setHasNotification(false);
+  };
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
@@ -59,13 +63,19 @@ export const WhatsAppButton: React.FC = () => {
       )}
 
       {/* Floating Action Button */}
-      <button
-        onClick={toggleOpen}
-        className="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110"
-        aria-label="Toggle WhatsApp Chat"
-      >
-        {isOpen ? <X size={28} /> : <WhatsAppIcon size={32} />}
-      </button>
+      <div className="relative inline-flex">
+        <button
+          onClick={toggleOpen}
+          className="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110"
+          aria-label="Toggle WhatsApp Chat"
+        >
+          {isOpen ? <X size={28} /> : <WhatsAppIcon size={32} />}
+        </button>
+        {/* Red notification dot */}
+        {hasNotification && !isOpen && (
+          <span className="absolute top-0 right-0 block w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-pulse" />
+        )}
+      </div>
     </div>
   );
 };
