@@ -53,7 +53,7 @@ export const Header: React.FC = () => {
               {link.name}
             </Link>
           ))}
-          <Link to="/contact" className="px-6 py-2 bg-royal-blue text-white rounded-full text-sm font-bold hover:bg-gold-500 transition-colors scroll-smooth">
+          <Link to="/book-appointment" className="px-6 py-2 bg-royal-blue text-white rounded-full text-sm font-bold hover:bg-gold-500 transition-colors scroll-smooth">
             Book Now
           </Link>
         </nav>
@@ -81,7 +81,7 @@ export const Header: React.FC = () => {
             </Link>
           ))}
           <Link 
-            to="/contact" 
+            to="/book-appointment" 
             onClick={() => setMobileMenuOpen(false)}
             className="px-8 py-3 bg-gold-500 text-white rounded-full font-bold my-2"
           >

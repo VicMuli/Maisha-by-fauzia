@@ -1,8 +1,15 @@
+export interface ServiceFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Service {
   id: string;
   title: string;
   description: string;
   icon: string;
+  details: string;
+  faqs: ServiceFAQ[];
 }
 
 export interface Testimonial {

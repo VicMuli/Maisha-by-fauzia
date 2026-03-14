@@ -1,30 +1,92 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { DOCTORS } from '../constants';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Users } from 'lucide-react';
 
 export const About: React.FC = () => {
   const doctor = DOCTORS[0];
 
+  // Animated counter state
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  // Start counter when section is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          setStarted(true);
+        }
+      },
+      { threshold: 0.4 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, [started]);
+
+  // Count up to 10000 over 10 seconds
+  useEffect(() => {
+    if (!started) return;
+    const target = 10000;
+    const duration = 10000; // 10 seconds
+    const interval = 50; // update every 50ms
+    const steps = duration / interval;
+    const increment = target / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [started]);
+
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" ref={sectionRef} className="py-24 bg-white">
       <div className="container mx-auto px-[0.5cm]">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
-          <div className="lg:w-1/2 relative order-2 lg:order-1">
-            <div className="grid grid-cols-2 gap-4">
-               <img 
-                 src="https://drive.google.com/thumbnail?id=14MZ6ZOAOGgAaQ5-7t2eTM7PbK_8SVUrb&sz=w1000" 
-                 className="rounded-2xl shadow-lg mt-12 w-full h-96 object-cover"
-                 alt="Clinic Interior"
-               />
-               <img 
-                 src={doctor.image} 
-                 className="rounded-2xl shadow-lg w-full h-96 object-cover"
-                 alt={doctor.name}
-               />
+          {/* Image — Hero-style framed */}
+          <div className="lg:w-1/2 relative">
+            {/* Decorative background accent */}
+            <div className="absolute -top-6 -left-6 w-full h-full border-2 border-gold-200 rounded-3xl z-0"></div>
+
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white z-10">
+              <img
+                src="https://drive.google.com/thumbnail?id=1PkiDEAPdTDOeDvdj7urPNW0-tbiPiCTa&sz=w1000"
+                className="w-full h-[520px] object-cover transform hover:scale-105 transition-transform duration-700"
+                alt="Maisha Medical Clinic"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-royal-blue/90 to-transparent"></div>
+
+              {/* Doctor label overlay */}
+              <div className="absolute bottom-6 left-6 text-white">
+                <p className="font-serif text-2xl mb-1">{doctor.name}</p>
+                <p className="text-gold-300 text-sm uppercase tracking-wider">Lead Specialist</p>
+              </div>
             </div>
-            {/* Decorative Gold Box */}
-            <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[110%] h-[90%] border-2 border-gold-200 rounded-3xl"></div>
+
+            {/* Animated Patient Counter Card — bottom right */}
+            <div className="absolute -bottom-6 -right-4 lg:-right-8 bg-white p-5 rounded-2xl shadow-xl border-l-4 border-gold-400 z-20 hidden md:block">
+              <div className="flex items-center gap-4">
+                <div className="bg-gold-100 p-3 rounded-xl text-gold-600">
+                  <Users size={24} />
+                </div>
+                <div>
+                  <p className="font-bold text-royal-blue text-2xl leading-none">
+                    {count >= 10000 ? '10,000+' : count.toLocaleString()}
+                  </p>
+                  <p className="text-slate-500 text-sm mt-1">Patients Served</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="lg:w-1/2 order-1 lg:order-2">

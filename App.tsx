@@ -8,6 +8,8 @@ import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { TestimonialsPage } from './pages/TestimonialsPage';
 import { ContactPage } from './pages/ContactPage';
+import { AppointmentPage } from './pages/AppointmentPage';
+import { ServiceDetailPage } from './pages/ServiceDetailPage';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/book-appointment" element={<AppointmentPage />} />
+            <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
           </Routes>
         </main>
         <Footer />

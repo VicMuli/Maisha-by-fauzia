@@ -47,9 +47,15 @@ export const QuickServices: React.FC = () => {
                     {service.title}
                   </h3>
                   
-                  <p className="text-slate-500 text-sm leading-relaxed truncate-2-lines">
+                  <p className="text-slate-500 text-sm leading-relaxed mb-4">
                     {service.description.length > 100 ? `${service.description.substring(0, 100)}...` : service.description}
                   </p>
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="inline-flex items-center gap-1 text-royal-blue text-sm font-bold hover:text-gold-500 transition-colors"
+                  >
+                    Learn More →
+                  </Link>
                 </div>
               </div>
             );
