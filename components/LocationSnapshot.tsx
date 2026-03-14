@@ -35,8 +35,8 @@ export const LocationSnapshot: React.FC = () => {
                   </div>
                   <div>
                     <h5 className="font-bold text-lg mb-1">Opening Hours</h5>
-                    <p className="text-slate-300 text-sm">Mon - Sat: 9:00 AM - 6:00 PM</p>
-                    <p className="text-slate-300 text-sm mt-1">Sun: 10:00 AM - 2:00 PM</p>
+                    <p className="text-slate-300 text-sm">Mon – Fri: 9:00 AM – 5:00 PM</p>
+                    <p className="text-slate-300 text-sm mt-1">Sat & Sun: Closed</p>
                   </div>
                 </div>
 

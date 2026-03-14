@@ -65,8 +65,8 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h5 className="font-bold text-royal-blue text-sm">Hours</h5>
-                  <p className="text-slate-500 text-sm">Mon – Sat: 9:00 AM – 6:00 PM</p>
-                  <p className="text-slate-500 text-sm">Sun: 10:00 AM – 2:00 PM</p>
+                  <p className="text-slate-500 text-sm">Mon – Fri: 9:00 AM – 5:00 PM</p>
+                  <p className="text-slate-500 text-sm">Sat & Sun: Closed</p>
                 </div>
               </div>
             </div>
