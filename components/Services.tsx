@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SERVICES } from '../constants';
 import * as Icons from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
@@ -6,7 +7,7 @@ import { LucideIcon } from 'lucide-react';
 export const Services: React.FC = () => {
   return (
     <section id="services" className="py-24 bg-slate-50">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-[0.5cm]">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h4 className="text-gold-600 font-bold uppercase tracking-widest text-sm mb-3">Our Expertise</h4>
           <h2 className="text-4xl md:text-5xl font-serif text-royal-blue mb-6">Comprehensive Care for Every Stage</h2>
@@ -41,9 +42,9 @@ export const Services: React.FC = () => {
                     {service.description}
                   </p>
 
-                  <a href="#contact" className="inline-block mt-4 px-6 py-3 bg-gold-400 text-royal-blue rounded-full text-sm font-bold hover:bg-gold-500 transition-colors shadow-md group-hover:shadow-lg transform group-hover:-translate-y-1 duration-300">
+                  <Link to="/contact" className="inline-block mt-4 px-6 py-3 bg-gold-400 text-royal-blue rounded-full text-sm font-bold hover:bg-gold-500 transition-colors shadow-md group-hover:shadow-lg transform group-hover:-translate-y-1 duration-300">
                     Book Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             );

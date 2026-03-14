@@ -7,7 +7,7 @@ export const About: React.FC = () => {
 
   return (
     <section id="about" className="py-24 bg-white">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-[0.5cm]">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
           <div className="lg:w-1/2 relative order-2 lg:order-1">

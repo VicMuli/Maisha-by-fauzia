@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Phone } from 'lucide-react';
 import { CLINIC_PHONE } from '../constants';
 
@@ -8,7 +9,7 @@ export const Hero: React.FC = () => {
       {/* Background shape */}
       <div className="absolute top-0 right-0 w-2/3 h-full bg-[#F8FAFC] hidden lg:block -skew-x-12 translate-x-32 z-0"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-[0.5cm] relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
           
           {/* Text Content */}
@@ -26,13 +27,13 @@ export const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a 
-                href="#contact" 
+              <Link 
+                to="/contact" 
                 className="px-8 py-4 bg-royal-blue text-white rounded-lg hover:bg-maisha-blue transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2 w-full sm:w-auto justify-center"
               >
                 <Calendar size={18} />
                 <span>Book Appointment</span>
-              </a>
+              </Link>
               <a 
                 href={`tel:${CLINIC_PHONE}`}
                 className="px-8 py-4 bg-white text-royal-blue border border-slate-200 rounded-lg hover:border-gold-400 hover:text-gold-600 transition-all duration-300 flex items-center gap-2 w-full sm:w-auto justify-center"
