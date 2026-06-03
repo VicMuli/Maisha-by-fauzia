@@ -7,9 +7,30 @@ export const About: React.FC = () => {
 
   // Animated counter state
   const [count, setCount] = useState(0);
+  const [yearsCount, setYearsCount] = useState(0);
   const [started, setStarted] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
+  // Count up to 16 years over 16 seconds
+  useEffect(() => {
+    if (!started) return;
+    const target = 16;
+    const duration = 16000; // 16 seconds
+    const interval = 50;
+    const steps = duration / interval;
+    const increment = target / steps;
+    let current = 0;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setYearsCount(target);
+        clearInterval(timer);
+      } else {
+        setYearsCount(Math.floor(current));
+      }
+    }, interval);
+    return () => clearInterval(timer);
+  }, [started]);
   // Start counter when section is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,7 +48,7 @@ export const About: React.FC = () => {
   // Count up to 10000 over 10 seconds
   useEffect(() => {
     if (!started) return;
-    const target = 10000;
+    const target = 20000; // Updated patient count to 20,000
     const duration = 10000; // 10 seconds
     const interval = 50; // update every 50ms
     const steps = duration / interval;
@@ -73,32 +94,54 @@ export const About: React.FC = () => {
               </div>
             </div>
 
-            {/* Animated Patient Counter Card — bottom right */}
-            <div className="absolute -bottom-6 -right-4 lg:-right-8 bg-white p-5 rounded-2xl shadow-xl border-l-4 border-gold-400 z-20 hidden md:block">
+            {/* Experience Counter Card */}
+            <div className="absolute -top-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border-r-4 border-gold-400 z-20 hidden md:block">
               <div className="flex items-center gap-4">
                 <div className="bg-gold-100 p-3 rounded-xl text-gold-600">
-                  <Users size={24} />
+                  <CheckCircle2 size={24} />
                 </div>
                 <div>
                   <p className="font-bold text-royal-blue text-2xl leading-none">
-                    {count >= 10000 ? '10,000+' : count.toLocaleString()}
+                    {count >= 20000 ? '20,000+' : count.toLocaleString()}
                   </p>
                   <p className="text-slate-500 text-sm mt-1">Patients Served</p>
                 </div>
               </div>
             </div>
-          </div>
+              {/* New Years of Experience Counter */}
+                <div className="absolute -top-6 -right-6 bg-white p-5 rounded-2xl shadow-xl border-l-4 border-gold-400 z-20 hidden md:block">
+                  <div>
+                    <p className="font-bold text-royal-blue text-2xl leading-none">
+                      {yearsCount >= 16 ? '16' : yearsCount}
+                    </p>
+                    <p className="text-slate-500 text-sm mt-1">Years Experience</p>
+                  </div>
+                </div>
+              </div>
+          
 
           <div className="lg:w-1/2 order-1 lg:order-2">
             <h4 className="text-gold-600 font-bold uppercase tracking-widest text-sm mb-3">About Maisha</h4>
             <h2 className="text-4xl font-serif text-royal-blue mb-6">A Sanctuary for Women's Health</h2>
             
             <p className="text-slate-600 mb-6 leading-relaxed">
-              At Maisha Medical, we believe that healthcare should be empowering. Founded by {doctor.name}, our clinic provides a safe, welcoming space where your health concerns are met with expertise and empathy.
+              At Maisha Medical, we believe that healthcare should be empowering. Founded by {doctor.name} in June 2024, our clinic provides a safe, welcoming space where your health concerns are met with expertise and empathy.
             </p>
-            <p className="text-slate-600 mb-8 leading-relaxed">
-              {doctor.bio} Whether you are planning a family, navigating menopause, or simply maintaining your wellness, we are here to support you with gold-standard medical care.
+            <p className="text-slate-600 mb-6 leading-relaxed">
+              Dr. Fauzia holds a Bachelor of Medicine, Bachelor of Surgery (MBBS) and a Master of Medicine in Obstetrics and Gynaecology (MMED). She works alongside specialists: an Endocrinologist, a Gynecologic Cancer Specialist, a Breast Specialist, and an Orthopedic Specialist, each contributing their expertise to comprehensive women's health.
             </p>
+<p className="text-slate-600 mb-8 leading-relaxed">
+  {doctor.bio} Dr. Fauzia has been qualified since 2010.
+</p>
+<div className="text-slate-600 mb-8 leading-relaxed">
+  <p>She works alongside several specialists:</p>
+  <ul className="list-disc list-inside">
+    <li>An Endocrinologist who manages hormone-related conditions.</li>
+    <li>A Gynecologic Cancer Specialist who treats cancers of the reproductive system.</li>
+    <li>A Breast Specialist who focuses on breast health and surgeries.</li>
+    <li>An Orthopedic Specialist who addresses bone and joint issues.</li>
+  </ul>
+</div>
 
             <div className="space-y-4 mb-10">
               <div className="flex items-center gap-3">
@@ -113,15 +156,19 @@ export const About: React.FC = () => {
                 <CheckCircle2 className="text-gold-500" size={20} />
                 <span className="text-slate-800 font-medium">Integrated holistic wellness approach</span>
               </div>
+              <hr className="border-t border-gold-200 my-4" />
+              <h3 className="text-xl font-serif text-royal-blue mb-3">Our Mission</h3>
+              <p className="text-slate-600 mb-4">To improve women's health and empower care for women.</p>
+              <h3 className="text-xl font-serif text-royal-blue mb-3">Our Vision</h3>
+              <p className="text-slate-600 mb-4">A full‑fledged center delivering multispecialist care, championing women's health at every life stage.</p>
             </div>
 
-            <button className="text-royal-blue font-bold border-b-2 border-gold-400 hover:text-gold-600 hover:border-royal-blue transition-all pb-1">
-              Read Our Story
-            </button>
+            
           </div>
 
         </div>
       </div>
+      
     </section>
   );
 };

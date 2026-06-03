@@ -42,9 +42,10 @@ export const Services: React.FC = () => {
                     {service.description}
                   </p>
 
-                  <Link to={`/services/${service.id}`} className="inline-flex items-center gap-1 text-royal-blue text-sm font-bold hover:text-gold-500 transition-colors">
-                    Learn More →
-                  </Link>
+                    <Link to={`/services/${service.id}`} className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-royal-blue to-gold-400 text-white font-semibold rounded-full hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl">
+                      Learn More
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
+                    </Link>
                 </div>
               </div>
             );
