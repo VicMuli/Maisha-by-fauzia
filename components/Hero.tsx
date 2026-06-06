@@ -8,33 +8,33 @@ export const Hero: React.FC = () => {
     <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
       {/* Background shape */}
       <div className="absolute top-0 right-0 w-2/3 h-full bg-[#F8FAFC] hidden lg:block -skew-x-12 translate-x-32 z-0"></div>
-      
+
       <div className="container mx-auto px-[0.5cm] relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
-          
+
           {/* Text Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
             <div className="inline-block px-4 py-1.5 bg-gold-100 text-gold-600 rounded-full text-xs font-bold uppercase tracking-wider mb-6 animate-fade-in-up border border-gold-200">
               New Patients Welcome
             </div>
-            
+
             <h1 className="text-5xl lg:text-7xl font-serif text-royal-blue leading-[1.1] mb-8">
               Expert Care for <span className="text-gold-500 italic">Women's Health</span>
             </h1>
-            
+
             <p className="text-lg text-slate-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Experience the Maisha difference. From routine check-ups to pregnancy care and beyond, we are dedicated to providing comprehensive, compassionate healthcare at every stage of your life.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-royal-blue text-white rounded-lg hover:bg-maisha-blue transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2 w-full sm:w-auto justify-center"
               >
                 <Calendar size={18} />
                 <span>Book Appointment</span>
               </Link>
-              <a 
+              <a
                 href={`tel:${CLINIC_PHONE}`}
                 className="px-8 py-4 bg-white text-royal-blue border border-slate-200 rounded-lg hover:border-gold-400 hover:text-gold-600 transition-all duration-300 flex items-center gap-2 w-full sm:w-auto justify-center"
               >
@@ -49,13 +49,13 @@ export const Hero: React.FC = () => {
           {/* Image */}
           <div className="lg:w-1/2 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
-              <img 
-                src="https://drive.google.com/thumbnail?id=1PkiDEAPdTDOeDvdj7urPNW0-tbiPiCTa&sz=w1000" 
-                alt="Dr. Fauzia consulting with patient" 
+              <img
+                src="https://x6ve2zvyt4mda5uv.private.blob.vercel-storage.com/Dr.Fauzia.jpg?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfWDZ2ZTJaVnl0NE1EYTV1ViIsIm93bmVySWQiOiJ0ZWFtX1M3bnVLQXBkaTJOZU1MMEhSc2Q0UjJHZyIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgwNzg0OTgyNTAxLCJpYXQiOjE3ODA3NDE3ODI2NDJ9.9befi_6zfvfg1RFo4qCPuojF93hK7HQmAzDzvF9HHL4&vercel-blob-signature=IRzNAuMHoOsFb7V7kyrvhvYWhZtRAKDyR_XquGlWF6Y"
+                alt="Dr. Fauzia consulting with patient"
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-royal-blue/90 to-transparent"></div>
-              
+
               <div className="absolute bottom-6 left-6 text-white">
                 <p className="font-serif text-2xl mb-1">Dr. Fauzia</p>
                 <p className="text-gold-300 text-sm uppercase tracking-wider">Lead Specialist</p>

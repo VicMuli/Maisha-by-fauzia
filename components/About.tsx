@@ -72,7 +72,7 @@ export const About: React.FC = () => {
     <section id="about" ref={sectionRef} className="py-24 bg-white">
       <div className="container mx-auto px-[0.5cm]">
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          
+
           {/* Image — Hero-style framed */}
           <div className="lg:w-1/2 relative">
             {/* Decorative background accent */}
@@ -80,7 +80,7 @@ export const About: React.FC = () => {
 
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white z-10">
               <img
-                src="https://drive.google.com/thumbnail?id=1PkiDEAPdTDOeDvdj7urPNW0-tbiPiCTa&sz=w1000"
+                src="https://x6ve2zvyt4mda5uv.private.blob.vercel-storage.com/Dr.Fauzia.jpg?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfWDZ2ZTJaVnl0NE1EYTV1ViIsIm93bmVySWQiOiJ0ZWFtX1M3bnVLQXBkaTJOZU1MMEhSc2Q0UjJHZyIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgwNzg0OTgyNTAxLCJpYXQiOjE3ODA3NDE3ODI2NDJ9.9befi_6zfvfg1RFo4qCPuojF93hK7HQmAzDzvF9HHL4&vercel-blob-signature=IRzNAuMHoOsFb7V7kyrvhvYWhZtRAKDyR_XquGlWF6Y"
                 className="w-full h-[520px] object-cover transform hover:scale-105 transition-transform duration-700"
                 alt="Maisha Medical Clinic"
               />
@@ -108,40 +108,40 @@ export const About: React.FC = () => {
                 </div>
               </div>
             </div>
-              {/* New Years of Experience Counter */}
-                <div className="absolute -top-6 -right-6 bg-white p-5 rounded-2xl shadow-xl border-l-4 border-gold-400 z-20 hidden md:block">
-                  <div>
-                    <p className="font-bold text-royal-blue text-2xl leading-none">
-                      {yearsCount >= 16 ? '16' : yearsCount}
-                    </p>
-                    <p className="text-slate-500 text-sm mt-1">Years Experience</p>
-                  </div>
-                </div>
+            {/* New Years of Experience Counter */}
+            <div className="absolute -top-6 -right-6 bg-white p-5 rounded-2xl shadow-xl border-l-4 border-gold-400 z-20 hidden md:block">
+              <div>
+                <p className="font-bold text-royal-blue text-2xl leading-none">
+                  {yearsCount >= 16 ? '16' : yearsCount}
+                </p>
+                <p className="text-slate-500 text-sm mt-1">Years Experience</p>
               </div>
-          
+            </div>
+          </div>
+
 
           <div className="lg:w-1/2 order-1 lg:order-2">
             <h4 className="text-gold-600 font-bold uppercase tracking-widest text-sm mb-3">About Maisha</h4>
             <h2 className="text-4xl font-serif text-royal-blue mb-6">A Sanctuary for Women's Health</h2>
-            
+
             <p className="text-slate-600 mb-6 leading-relaxed">
               At Maisha Medical, we believe that healthcare should be empowering. Founded by {doctor.name} in June 2024, our clinic provides a safe, welcoming space where your health concerns are met with expertise and empathy.
             </p>
             <p className="text-slate-600 mb-6 leading-relaxed">
               Dr. Fauzia holds a Bachelor of Medicine, Bachelor of Surgery (MBBS) and a Master of Medicine in Obstetrics and Gynaecology (MMED). She works alongside specialists: an Endocrinologist, a Gynecologic Cancer Specialist, a Breast Specialist, and an Orthopedic Specialist, each contributing their expertise to comprehensive women's health.
             </p>
-<p className="text-slate-600 mb-8 leading-relaxed">
-  {doctor.bio} Dr. Fauzia has been qualified since 2010.
-</p>
-<div className="text-slate-600 mb-8 leading-relaxed">
-  <p>She works alongside several specialists:</p>
-  <ul className="list-disc list-inside">
-    <li>An Endocrinologist who manages hormone-related conditions.</li>
-    <li>A Gynecologic Cancer Specialist who treats cancers of the reproductive system.</li>
-    <li>A Breast Specialist who focuses on breast health and surgeries.</li>
-    <li>An Orthopedic Specialist who addresses bone and joint issues.</li>
-  </ul>
-</div>
+            <p className="text-slate-600 mb-8 leading-relaxed">
+              {doctor.bio} Dr. Fauzia has been qualified since 2010.
+            </p>
+            <div className="text-slate-600 mb-8 leading-relaxed">
+              <p>She works alongside several specialists:</p>
+              <ul className="list-disc list-inside">
+                <li>An Endocrinologist who manages hormone-related conditions.</li>
+                <li>A Gynecologic Cancer Specialist who treats cancers of the reproductive system.</li>
+                <li>A Breast Specialist who focuses on breast health and surgeries.</li>
+                <li>An Orthopedic Specialist who addresses bone and joint issues.</li>
+              </ul>
+            </div>
 
             <div className="space-y-4 mb-10">
               <div className="flex items-center gap-3">
@@ -163,12 +163,12 @@ export const About: React.FC = () => {
               <p className="text-slate-600 mb-4">A full‑fledged center delivering multispecialist care, championing women's health at every life stage.</p>
             </div>
 
-            
+
           </div>
 
         </div>
       </div>
-      
+
     </section>
   );
 };
