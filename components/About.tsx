@@ -80,7 +80,7 @@ export const About: React.FC = () => {
 
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white z-10">
               <img
-                src="https://x6ve2zvyt4mda5uv.private.blob.vercel-storage.com/Dr.Fauzia.jpg?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfWDZ2ZTJaVnl0NE1EYTV1ViIsIm93bmVySWQiOiJ0ZWFtX1M3bnVLQXBkaTJOZU1MMEhSc2Q0UjJHZyIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgwNzg0OTgyNTAxLCJpYXQiOjE3ODA3NDE3ODI2NDJ9.9befi_6zfvfg1RFo4qCPuojF93hK7HQmAzDzvF9HHL4&vercel-blob-signature=IRzNAuMHoOsFb7V7kyrvhvYWhZtRAKDyR_XquGlWF6Y"
+                src="https://imgur.com/kZnwP4G"
                 className="w-full h-[520px] object-cover transform hover:scale-105 transition-transform duration-700"
                 alt="Maisha Medical Clinic"
               />
