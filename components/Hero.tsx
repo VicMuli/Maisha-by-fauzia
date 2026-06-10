@@ -50,7 +50,9 @@ export const Hero: React.FC = () => {
           <div className="lg:w-1/2 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
               <img
-                src="https://imgur.com/z0v6iab"
+                src="https://i.imgur.com/z0v6iab.jpg"
+                referrerPolicy="no-referrer"
+                loading="lazy"
                 alt="Dr. Fauzia consulting with patient"
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
               />
