@@ -73,8 +73,14 @@ export const About: React.FC = () => {
       <div className="container mx-auto px-[0.5cm]">
         <div className="flex flex-col lg:flex-row items-center gap-16">
 
+          {/* Mobile-only heading — shown above the image on small screens */}
+          <div className="w-full order-1 lg:hidden">
+            <h4 className="text-gold-600 font-bold uppercase tracking-widest text-sm mb-3">About Maisha</h4>
+            <h2 className="text-4xl font-serif text-royal-blue">A Sanctuary for Women's Health</h2>
+          </div>
+
           {/* Image — Hero-style framed */}
-          <div className="lg:w-1/2 relative">
+          <div className="order-2 lg:order-1 lg:w-1/2 relative">
             {/* Decorative background accent */}
             <div className="absolute -top-6 -left-6 w-full h-full border-2 border-gold-200 rounded-3xl z-0"></div>
 
@@ -122,9 +128,9 @@ export const About: React.FC = () => {
           </div>
 
 
-          <div className="lg:w-1/2 order-1 lg:order-2">
-            <h4 className="text-gold-600 font-bold uppercase tracking-widest text-sm mb-3">About Maisha</h4>
-            <h2 className="text-4xl font-serif text-royal-blue mb-6">A Sanctuary for Women's Health</h2>
+          <div className="lg:w-1/2 order-3 lg:order-2">
+            <h4 className="hidden lg:block text-gold-600 font-bold uppercase tracking-widest text-sm mb-3">About Maisha</h4>
+            <h2 className="hidden lg:block text-4xl font-serif text-royal-blue mb-6">A Sanctuary for Women's Health</h2>
 
             <p className="text-slate-600 mb-6 leading-relaxed">
               At Maisha Medical, we believe that healthcare should be empowering. Founded by {doctor.name} in June 2024, our clinic provides a safe, welcoming space where your health concerns are met with expertise and empathy.
