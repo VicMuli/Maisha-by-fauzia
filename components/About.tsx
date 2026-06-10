@@ -80,7 +80,7 @@ export const About: React.FC = () => {
 
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white z-10">
               <img
-                src="https://i.imgur.com/kZnwP4G.jpg"
+                src="https://i.imgur.com/z0v6iab.jpg"
                 referrerPolicy="no-referrer"
                 loading="lazy"
                 className="w-full h-[520px] object-cover transform hover:scale-105 transition-transform duration-700"
