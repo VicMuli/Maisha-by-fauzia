@@ -93,11 +93,11 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-gold-400 flex-shrink-0" size={18} />
-                <span className="text-slate-400 text-sm">{CLINIC_PHONE}</span>
+                <a href={`tel:${CLINIC_PHONE}`} className="text-slate-400 hover:text-gold-400 transition-colors text-sm">{CLINIC_PHONE}</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-gold-400 flex-shrink-0" size={18} />
-                <span className="text-slate-400 text-sm">{CLINIC_EMAIL}</span>
+                <a href={`mailto:${CLINIC_EMAIL}`} className="text-slate-400 hover:text-gold-400 transition-colors text-sm">{CLINIC_EMAIL}</a>
               </li>
             </ul>
           </div>

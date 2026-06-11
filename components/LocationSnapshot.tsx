@@ -46,8 +46,12 @@ export const LocationSnapshot: React.FC = () => {
                   </div>
                   <div>
                     <h5 className="font-bold text-lg mb-1">Contact Details</h5>
-                    <p className="text-slate-300 text-sm mb-1">{CLINIC_PHONE}</p>
-                    <p className="text-slate-300 text-sm">{CLINIC_EMAIL}</p>
+                    <p className="text-slate-300 text-sm mb-1">
+                      <a href={`tel:${CLINIC_PHONE}`} className="hover:text-gold-400 transition-colors">{CLINIC_PHONE}</a>
+                    </p>
+                    <p className="text-slate-300 text-sm">
+                      <a href={`mailto:${CLINIC_EMAIL}`} className="hover:text-gold-400 transition-colors">{CLINIC_EMAIL}</a>
+                    </p>
                   </div>
                 </div>
               </div>

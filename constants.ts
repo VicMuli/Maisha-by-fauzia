@@ -3,7 +3,7 @@ import { Service, Testimonial, Doctor } from './types';
 export const CLINIC_NAME = "Maisha Medical";
 export const CLINIC_ADDRESS = "Doctor's Park, Wing A, 8th Floor, 3rd Parklands Ave, Nairobi";
 export const CLINIC_PHONE = "0745795686";
-export const CLINIC_EMAIL = "care@maishamedical.com";
+export const CLINIC_EMAIL = "maishabyfauzia@gmail.com";
 
 export const SERVICES: Service[] = [
   {

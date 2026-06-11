@@ -45,7 +45,9 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h5 className="font-bold text-royal-blue text-sm">Phone</h5>
-                  <p className="text-slate-500 text-sm">{CLINIC_PHONE}</p>
+                  <p className="text-slate-500 text-sm">
+                    <a href={`tel:${CLINIC_PHONE}`} className="hover:text-gold-500 transition-colors">{CLINIC_PHONE}</a>
+                  </p>
                 </div>
               </div>
 
@@ -55,7 +57,9 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h5 className="font-bold text-royal-blue text-sm">Email</h5>
-                  <p className="text-slate-500 text-sm">{CLINIC_EMAIL}</p>
+                  <p className="text-slate-500 text-sm">
+                    <a href={`mailto:${CLINIC_EMAIL}`} className="hover:text-gold-500 transition-colors">{CLINIC_EMAIL}</a>
+                  </p>
                 </div>
               </div>
 
