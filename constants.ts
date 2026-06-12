@@ -147,7 +147,7 @@ export const DOCTORS: Doctor[] = [
     id: 'dr-fauzia',
     name: 'Dr. Fauzia',
     role: 'Lead Obstetrician & Gynecologist',
-    bio: 'With over 15 years of experience, Dr. Fauzia specializes in high-risk pregnancies, reproductive health, and minimally invasive gynecologic surgery.',
+    bio: 'Doctor Fauzia with Over 20 years of experience, specializes in high-risk pregnancies, reproductive health, and minimally invasive gynecologic surgery.',
     image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   }
 ];

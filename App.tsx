@@ -14,7 +14,7 @@ import { ServiceDetailPage } from './pages/ServiceDetailPage';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-slate-50 font-sans selection:bg-gold-200 selection:text-royal-blue">
+      <div className="min-h-screen bg-blush-50 font-sans selection:bg-gold-200 selection:text-royal-blue">
         <Header />
         <main>
           <Routes>

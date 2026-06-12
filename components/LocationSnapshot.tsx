@@ -4,7 +4,7 @@ import { CLINIC_ADDRESS, CLINIC_PHONE, CLINIC_EMAIL } from '../constants';
 
 export const LocationSnapshot: React.FC = () => {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-blush-50">
       <div className="container mx-auto px-[0.5cm]">
         <div className="flex flex-col lg:flex-row gap-12 bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl">
           

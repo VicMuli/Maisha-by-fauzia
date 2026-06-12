@@ -26,7 +26,7 @@ export const ServiceDetailPage: React.FC = () => {
   const IconComponent = (Icons[service.icon as keyof typeof Icons] as LucideIcon) || Icons.Activity;
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-blush-50">
       {/* Hero Banner */}
       <div className="bg-royal-blue pt-32 pb-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full translate-x-1/3 -translate-y-1/2"></div>

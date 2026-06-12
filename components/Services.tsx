@@ -6,7 +6,7 @@ import { LucideIcon } from 'lucide-react';
 
 export const Services: React.FC = () => {
   return (
-    <section id="services" className="py-24 bg-slate-50">
+    <section id="services" className="py-24 bg-blush-50">
       <div className="container mx-auto px-[0.5cm]">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h4 className="text-gold-600 font-bold uppercase tracking-widest text-sm mb-3">Our Expertise</h4>

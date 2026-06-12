@@ -5,9 +5,9 @@ import { CLINIC_PHONE } from '../constants';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
+    <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-blush-50">
       {/* Background shape */}
-      <div className="absolute top-0 right-0 w-2/3 h-full bg-[#F8FAFC] hidden lg:block -skew-x-12 translate-x-32 z-0"></div>
+      <div className="absolute top-0 right-0 w-2/3 h-full bg-blush-100 hidden lg:block -skew-x-12 translate-x-32 z-0"></div>
 
       <div className="container mx-auto px-[0.5cm] relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <Link
-                to="/contact"
+                to="/book-appointment"
                 className="px-8 py-4 bg-royal-blue text-white rounded-lg hover:bg-maisha-blue transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2 w-full sm:w-auto justify-center"
               >
                 <Calendar size={18} />

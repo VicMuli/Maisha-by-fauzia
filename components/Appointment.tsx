@@ -26,7 +26,7 @@ export const Appointment: React.FC = () => {
   };
 
   return (
-    <section id="book-appointment" className="min-h-screen bg-slate-50 flex items-center py-32">
+    <section id="book-appointment" className="min-h-screen bg-blush-50 flex items-center py-32">
       <div className="container mx-auto px-[0.5cm]">
         <div className="max-w-2xl mx-auto">
 

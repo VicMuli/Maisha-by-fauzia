@@ -9,7 +9,7 @@ export const QuickServices: React.FC = () => {
   const recentServices = SERVICES.slice(0, 4);
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-blush-50">
       <div className="container mx-auto px-[0.5cm]">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div className="max-w-xl">

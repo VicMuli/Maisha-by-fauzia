@@ -11,11 +11,11 @@ export const About: React.FC = () => {
   const [started, setStarted] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  // Count up to 16 years over 16 seconds
+  // Count up to 20 years over 2 seconds
   useEffect(() => {
     if (!started) return;
-    const target = 16;
-    const duration = 16000; // 16 seconds
+    const target = 20;
+    const duration = 2000; // 2 seconds
     const interval = 50;
     const steps = duration / interval;
     const increment = target / steps;
@@ -69,7 +69,7 @@ export const About: React.FC = () => {
   }, [started]);
 
   return (
-    <section id="about" ref={sectionRef} className="py-24 bg-white">
+    <section id="about" ref={sectionRef} className="py-24 bg-blush-50">
       <div className="container mx-auto px-[0.5cm]">
         <div className="flex flex-col lg:flex-row items-center gap-16">
 
@@ -120,7 +120,7 @@ export const About: React.FC = () => {
             <div className="absolute -top-6 -right-6 bg-white p-5 rounded-2xl shadow-xl border-l-4 border-gold-400 z-20 hidden md:block">
               <div>
                 <p className="font-bold text-royal-blue text-2xl leading-none">
-                  {yearsCount >= 16 ? '16' : yearsCount}
+                  {yearsCount >= 20 ? '20+' : yearsCount}
                 </p>
                 <p className="text-slate-500 text-sm mt-1">Years Experience</p>
               </div>

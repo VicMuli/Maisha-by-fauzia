@@ -14,7 +14,7 @@ export const Contact: React.FC = () => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
-    <footer id="contact" className="bg-slate-50 pt-24 pb-12 border-t border-slate-200">
+    <footer id="contact" className="bg-blush-50 pt-24 pb-12 border-t border-slate-200">
       <div className="container mx-auto px-[0.5cm]">
         <div className="flex flex-col lg:flex-row gap-16 mb-16">
           

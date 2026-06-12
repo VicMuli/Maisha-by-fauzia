@@ -5,7 +5,7 @@ export const WhyChooseUs: React.FC = () => {
   const reasons = [
     {
       title: "Expert Care",
-      description: "Led by Dr. Fauzia with over 15 years of specialized experience in women's health.",
+      description: "Led by Doctor Fauzia with Over 20 years of specialized experience in women's health.",
       icon: <HeartPulse className="w-8 h-8 text-white" />
     },
     {
@@ -26,7 +26,7 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-blush-50">
       <div className="container mx-auto px-[0.5cm]">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h4 className="text-gold-500 font-bold uppercase tracking-widest text-sm mb-3">Why Choose Maisha</h4>
