@@ -61,15 +61,14 @@ export const LocationSnapshot: React.FC = () => {
           {/* Map Side */}
           <div className="lg:w-7/12 min-h-[400px] lg:min-h-full">
             <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8537529409086!2d36.8179083!3d-1.2599000999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17e95f944311%3A0xd9fc177cb94a9dab!2sMaisha%20by%20Dr.%20Fauzia!5e0!3m2!1sen!2ske!4v1781504248257!5m2!1sen!2ske"
               width="100%"
               height="100%"
-              id="gmap_canvas"
-              src="https://maps.google.com/maps?q=Dr.%20Fauzia%20Butt%20-%20Maisha%20by%20Dr.%20Fauzia&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              frameBorder="0"
-              scrolling="no"
-              marginHeight={0}
-              marginWidth={0}
-              title="Clinic Location"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Maisha by Dr. Fauzia Location Map"
               className="h-full min-h-[400px]"
             ></iframe>
           </div>
