@@ -50,7 +50,7 @@ export const Hero: React.FC = () => {
           <div className="lg:w-1/2 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
               <img
-                src="https://i.imgur.com/z0v6iab.jpg"
+                src="/doctor-fauzia.jpg"
                 referrerPolicy="no-referrer"
                 loading="lazy"
                 alt="Dr. Fauzia consulting with patient"

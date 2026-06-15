@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
           <div className="relative w-14 h-14 flex-shrink-0">
-             <img src="https://drive.google.com/thumbnail?id=1zuuZmqJhGyT9Gh9k8fbFd7vGyRkKpBZ_&sz=w1000" alt="Maisha Medical Logo" className="w-full h-full object-contain bg-white rounded-full p-1" />
+              <img src="/logo.png" alt="Maisha Medical Logo" className="w-full h-full object-contain bg-white rounded-full p-1" />
           </div>
           
           <div className="flex flex-col">

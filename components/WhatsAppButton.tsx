@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { CLINIC_NAME } from '../constants';
 
-const LOGO_URL = 'https://drive.google.com/thumbnail?id=1zuuZmqJhGyT9Gh9k8fbFd7vGyRkKpBZ_&sz=w1000';
+const LOGO_URL = '/logo.png';
 
 const WhatsAppIcon = ({ size = 24 }: { size?: number }) => (
   <svg height={size} width={size} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

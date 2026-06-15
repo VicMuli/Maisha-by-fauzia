@@ -138,7 +138,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Atieno Ochieng',
     role: 'Patient',
     quote: 'Finally found a clinic that takes women’s health seriously at every stage. The menopause care has changed my life.',
-    image: 'https://drive.google.com/thumbnail?id=1PWl8uUwRXghWiP51FP4eU5JXPeuorB7b&sz=w1000'
+    image: '/testimonial-3.jpg'
   }
 ];
 
